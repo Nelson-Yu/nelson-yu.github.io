@@ -1,10 +1,12 @@
 import React from 'react';
+import Chalkboard from '../chalkboard/Chalkboard';
 import './App.scss';
 
 const App = () => {
   return (
     <div className="App">
-      <p>Hello World</p>
+      <Chalkboard />
+      <span className="test">Hello World</span>
     </div>
   );
 };
