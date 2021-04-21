@@ -1,0 +1,30 @@
+@import '/src/assets/scss/variables';
+
+.header_container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 3rem;
+  text-align: center;
+  z-index: 99;
+
+  .header_content {
+    position: absolute;
+
+    .header_intro {
+      margin-bottom: 1rem;
+    }
+
+    .header_name,
+    .header_role {
+      color: $red-chalk;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}
