@@ -161,6 +161,8 @@ const Chalkboard = () => {
         onMouseMove={handleOnMouseMove}
         onMouseDown={handleOnMouseDown}
         onMouseUp={handleOnMouseUp}
+        onMouseOut={handleOnMouseUp}
+        onBlur={handleOnMouseUp}
       ></canvas>
       <div className="chalk" ref={chalkRef}></div>
     </>
