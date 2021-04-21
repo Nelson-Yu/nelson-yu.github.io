@@ -26,9 +26,9 @@ const Chalkboard = () => {
   const initChalkboardCanvas = () => {
     ctxRef.current = chalkboardRef.current.getContext('2d');
 
-    document.onselectstart = () => {
-      return false;
-    };
+    // document.onselectstart = () => {
+    //   return false;
+    // };
 
     ctxRef.current.fillStyle = 'rgba(255,255,255,0.5)';
     ctxRef.current.strokeStyle = 'rgba(255,255,255,0.5)';
@@ -43,33 +43,33 @@ const Chalkboard = () => {
   };
 
   // Touch events for mobile
-  const handleOnTouchMove = (e) => {
-    let touch = e.touches[0];
-    mouseXRef.current = touch.pageX;
-    mouseYRef.current = touch.pageY;
-    if (mouseYRef.current < height && mouseXRef.current < width) {
-      // e.preventDefault();
-      chalkRef.current.style.left = mouseXRef.current + 'px';
-      chalkRef.current.style.top = mouseYRef.current + 'px';
-      if (mouseDRef.current) {
-        drawChalkboard(mouseXRef.current, mouseYRef.current);
-      }
-    }
-  };
+  // const handleOnTouchMove = (e) => {
+  //   let touch = e.touches[0];
+  //   mouseXRef.current = touch.pageX;
+  //   mouseYRef.current = touch.pageY;
+  //   if (mouseYRef.current < height && mouseXRef.current < width) {
+  //     // e.preventDefault();
+  //     chalkRef.current.style.left = mouseXRef.current + 'px';
+  //     chalkRef.current.style.top = mouseYRef.current + 'px';
+  //     if (mouseDRef.current) {
+  //       drawChalkboard(mouseXRef.current, mouseYRef.current);
+  //     }
+  //   }
+  // };
 
-  const handleOnTouchStart = (e) => {
-    let touch = e.touches[0];
-    mouseDRef.current = true;
-    mouseXRef.current = touch.pageX;
-    mouseYRef.current = touch.pageY;
-    xLastRef.current = mouseXRef.current;
-    yLastRef.current = mouseYRef.current;
-    drawChalkboard(mouseXRef.current + 1, mouseYRef.current + 1);
-  };
+  // const handleOnTouchStart = (e) => {
+  //   let touch = e.touches[0];
+  //   mouseDRef.current = true;
+  //   mouseXRef.current = touch.pageX;
+  //   mouseYRef.current = touch.pageY;
+  //   xLastRef.current = mouseXRef.current;
+  //   yLastRef.current = mouseYRef.current;
+  //   drawChalkboard(mouseXRef.current + 1, mouseYRef.current + 1);
+  // };
 
-  const handleOnTouchEnd = () => {
-    mouseDRef.current = false;
-  };
+  // const handleOnTouchEnd = () => {
+  //   mouseDRef.current = false;
+  // };
 
   // Mouse events
   const handleOnMouseMove = (e) => {
@@ -93,10 +93,18 @@ const Chalkboard = () => {
     xLastRef.current = mouseXRef.current;
     yLastRef.current = mouseYRef.current;
     drawChalkboard(mouseXRef.current + 1, mouseYRef.current + 1);
+
+    document.onselectstart = () => {
+      return false;
+    };
   };
 
   const handleOnMouseUp = () => {
     mouseDRef.current = false;
+
+    document.onselectstart = () => {
+      return true;
+    };
   };
 
   // Draws on Chalkboard
@@ -155,9 +163,9 @@ const Chalkboard = () => {
         ref={chalkboardRef}
         height={height}
         width={width}
-        onTouchMove={handleOnTouchMove}
-        onTouchStart={handleOnTouchStart}
-        onTouchEnd={handleOnTouchEnd}
+        // onTouchMove={handleOnTouchMove}
+        // onTouchStart={handleOnTouchStart}
+        // onTouchEnd={handleOnTouchEnd}
         onMouseMove={handleOnMouseMove}
         onMouseDown={handleOnMouseDown}
         onMouseUp={handleOnMouseUp}
