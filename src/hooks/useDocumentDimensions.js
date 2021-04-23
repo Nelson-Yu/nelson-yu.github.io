@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
 
 const getDocumentDimensions = () => {
-  console.log;
-
   const { offsetWidth: width, offsetHeight: height } = window.document.body;
   return {
     width,
@@ -20,8 +18,18 @@ const useDocumentDimensions = () => {
       setDocumentDimensions(getDocumentDimensions());
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    // Create an Observer instance
+    const resizeObserver = new ResizeObserver(() => {
+      handleResize();
+    });
+
+    // Start observing a DOM node
+    resizeObserver.observe(document.body);
+
+    return () => {
+      // Disconnect observing of DOM node
+      resizeObserver.disconnect();
+    };
   }, []);
 
   return documentDimensions;
