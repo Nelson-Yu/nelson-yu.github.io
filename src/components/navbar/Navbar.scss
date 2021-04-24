@@ -1,3 +1,6 @@
+@import '/src/assets/scss/variables';
+@import '/src/assets/scss/mixins';
+
 .navbar_container {
   position: fixed;
   top: 0;
@@ -15,19 +18,86 @@
       margin: 1rem;
       font-size: 1.5rem;
       text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.75);
       text-decoration: none;
-      background: url(/assets/images/chalk-border.png);
-      background-size: 100% 100%;
 
-      &:visited {
-        color: rgba(255, 255, 255, 0.75);
-        text-decoration: none;
+      &:first-child {
+        color: $blue-chalk;
+        background: url(/assets/images/chalk-border-blue.png);
+        background-size: 100% 100%;
+      }
+
+      &:nth-child(2) {
+        color: $green-chalk;
+        background: url(/assets/images/chalk-border-green.png);
+        background-size: 100% 100%;
+      }
+
+      &:nth-child(3) {
+        color: $yellow-chalk;
+        background: url(/assets/images/chalk-border-yellow.png);
+        background-size: 100% 100%;
+      }
+
+      &:nth-child(4) {
+        color: $magenta-chalk;
+        background: url(/assets/images/chalk-border-magenta.png);
+        background-size: 100% 100%;
+      }
+
+      &:hover {
+        background: url(/assets/images/chalk-border.png);
+        background-size: 100% 100%;
+        color: $white-chalk;
       }
 
       span {
         padding: 1rem;
         display: block;
+      }
+
+      @include td {
+        font-size: 1.25rem;
+        margin: 1rem 0.5rem 0rem;
+      }
+
+      @include md-new-landscape {
+        font-size: 1rem;
+        margin: 0.5rem 0.5rem 0rem;
+      }
+    }
+  }
+}
+
+// Responsiveness
+@media (max-width: $tablet-width) {
+  .navbar_container {
+    .navbar {
+      a {
+        font-size: 1.25rem;
+        margin: 1rem 0.5rem 0rem;
+      }
+    }
+  }
+}
+
+// Specific Orientations Responsiveness
+@media (max-width: $mobile-width-modern-landscape) and (orientation: landscape) {
+  .navbar_container {
+    .navbar {
+      a {
+        font-size: 1rem;
+        margin: 0.5rem 0.5rem 0rem;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-width-old-landscape) and (orientation: landscape) {
+  .navbar_container {
+    .navbar {
+      a {
+        font-size: 1rem;
+        margin: 0.5rem 0.5rem 0rem;
       }
     }
   }

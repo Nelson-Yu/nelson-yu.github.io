@@ -1,0 +1,25 @@
+@import '/src/assets/scss/variables';
+
+@mixin md {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
+}
+
+@mixin md-old-landscape {
+  @media (max-width: $mobile-width-old-landscape) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin md-new-landscape {
+  @media (max-width: $mobile-width-modern-landscape) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin td {
+  @media (max-width: $tablet-width) {
+    @content;
+  }
+}
