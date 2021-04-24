@@ -1,4 +1,5 @@
 @import '/src/assets/scss/variables';
+@import '/src/assets/scss/mixins';
 
 .navbar_container {
   position: fixed;
@@ -52,6 +53,51 @@
       span {
         padding: 1rem;
         display: block;
+      }
+
+      @include td {
+        font-size: 1.25rem;
+        margin: 1rem 0.5rem 0rem;
+      }
+
+      @include md-new-landscape {
+        font-size: 1rem;
+        margin: 0.5rem 0.5rem 0rem;
+      }
+    }
+  }
+}
+
+// Responsiveness
+@media (max-width: $tablet-width) {
+  .navbar_container {
+    .navbar {
+      a {
+        font-size: 1.25rem;
+        margin: 1rem 0.5rem 0rem;
+      }
+    }
+  }
+}
+
+// Specific Orientations Responsiveness
+@media (max-width: $mobile-width-modern-landscape) and (orientation: landscape) {
+  .navbar_container {
+    .navbar {
+      a {
+        font-size: 1rem;
+        margin: 0.5rem 0.5rem 0rem;
+      }
+    }
+  }
+}
+
+@media (max-width: $mobile-width-old-landscape) and (orientation: landscape) {
+  .navbar_container {
+    .navbar {
+      a {
+        font-size: 1rem;
+        margin: 0.5rem 0.5rem 0rem;
       }
     }
   }
