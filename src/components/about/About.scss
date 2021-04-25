@@ -2,15 +2,24 @@
 @import '/src/assets/scss/mixins';
 
 .about_container {
-  margin: 20vh 12.5vw;
+  margin: 10vh 12.5vw;
   z-index: 99;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
 
+  @include td {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .about_photo_container {
     width: 25vw;
+
+    @include td {
+      width: 50%;
+    }
 
     .about_polaroid {
       position: relative;
@@ -35,6 +44,13 @@
         top: -1.4vw;
         background: url(/assets/images/tape.png) no-repeat;
         background-size: cover;
+
+        @include td {
+          width: 50%;
+          height: 14%;
+          left: 25%;
+          top: -7%;
+        }
       }
 
       img {
@@ -51,6 +67,14 @@
         font-size: 2rem;
         font-weight: 600;
         font-family: 'Swanky and Moo Moo', cursive;
+
+        @include md {
+          font-size: 1.25rem;
+        }
+
+        @include md-new-landscape {
+          font-size: 1.5rem;
+        }
       }
     }
 
@@ -76,6 +100,27 @@
     width: 50vw;
     margin: 0 2rem;
     font-size: 1.25rem;
+
+    @include td {
+      width: 100%;
+    }
+
+    @include md {
+      font-size: 1rem;
+    }
+
+    @include md-new-landscape {
+      font-size: 1rem;
+    }
+
+    p {
+      &:first-child {
+        margin-top: 0%;
+      }
+      &:last-child {
+        margin-bottom: 0%;
+      }
+    }
 
     .about_profile_link {
       color: $blue-chalk;
