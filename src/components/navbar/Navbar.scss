@@ -20,7 +20,7 @@
       text-transform: uppercase;
       text-decoration: none;
 
-      &:first-child {
+      &:nth-child(1) {
         color: $blue-chalk;
         background: url(/assets/images/chalk-border-blue.png);
         background-size: 100% 100%;
@@ -60,42 +60,12 @@
         margin: 1rem 0.5rem 0rem;
       }
 
+      @include md {
+        font-size: 1rem;
+        margin: 0.5rem 0.5rem 0rem;
+      }
+
       @include md-new-landscape {
-        font-size: 1rem;
-        margin: 0.5rem 0.5rem 0rem;
-      }
-    }
-  }
-}
-
-// Responsiveness
-@media (max-width: $tablet-width) {
-  .navbar_container {
-    .navbar {
-      a {
-        font-size: 1.25rem;
-        margin: 1rem 0.5rem 0rem;
-      }
-    }
-  }
-}
-
-// Specific Orientations Responsiveness
-@media (max-width: $mobile-width-modern-landscape) and (orientation: landscape) {
-  .navbar_container {
-    .navbar {
-      a {
-        font-size: 1rem;
-        margin: 0.5rem 0.5rem 0rem;
-      }
-    }
-  }
-}
-
-@media (max-width: $mobile-width-old-landscape) and (orientation: landscape) {
-  .navbar_container {
-    .navbar {
-      a {
         font-size: 1rem;
         margin: 0.5rem 0.5rem 0rem;
       }

@@ -1,0 +1,135 @@
+@import '/src/assets/scss/variables';
+@import '/src/assets/scss/mixins';
+
+.about_container {
+  margin: 10vh 12.5vw;
+  z-index: 99;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+
+  @include td {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about_photo_container {
+    width: 25vw;
+
+    @include td {
+      width: 50%;
+    }
+
+    .about_polaroid {
+      position: relative;
+      width: auto;
+      height: auto;
+      transform: rotate(-2.5deg);
+      background: #fcfcfc;
+      box-shadow: 0 0 10px #101010;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      margin: 0 2.5vw;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 10vw;
+        height: 2.8vw;
+        position: absolute;
+        left: 5vw;
+        top: -1.4vw;
+        background: url(/assets/images/tape.png) no-repeat;
+        background-size: cover;
+
+        @include td {
+          width: 50%;
+          height: 14%;
+          left: 25%;
+          top: -7%;
+        }
+      }
+
+      img {
+        display: block;
+        width: 90%;
+        height: auto;
+        margin: 5% 5% 0%;
+        border-radius: 1%;
+      }
+
+      span {
+        color: black;
+        margin: auto;
+        font-size: 2rem;
+        font-weight: 600;
+        font-family: 'Swanky and Moo Moo', cursive;
+
+        @include md {
+          font-size: 1.25rem;
+        }
+
+        @include md-new-landscape {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .about_socials {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: center;
+      margin: 1rem 2.5vw;
+
+      a {
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .about_profile_container {
+    position: relative;
+    width: 50vw;
+    margin: 0 2rem;
+    font-size: 1.25rem;
+
+    @include td {
+      width: 100%;
+    }
+
+    @include md {
+      font-size: 1rem;
+    }
+
+    @include md-new-landscape {
+      font-size: 1rem;
+    }
+
+    p {
+      &:first-child {
+        margin-top: 0%;
+      }
+      &:last-child {
+        margin-bottom: 0%;
+      }
+    }
+
+    .about_profile_link {
+      color: $blue-chalk;
+      text-decoration: none;
+
+      &:visited {
+        color: $blue-chalk;
+        text-decoration: none;
+      }
+    }
+  }
+}
