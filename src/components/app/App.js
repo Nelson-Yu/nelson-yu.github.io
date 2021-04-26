@@ -1,15 +1,29 @@
 import React from 'react';
+import { isMobileOnly } from 'react-device-detect';
 import About from '../about/About';
 import Chalkboard from '../chalkboard/Chalkboard';
+import HamburgerMenu from '../hamburger-menu/HamburgerMenu';
 import Header from '../header/Header';
 import Navbar from '../navbar/Navbar';
 import './App.scss';
 
 const App = () => {
+  const renderMenu = () => {
+    if (isMobileOnly) {
+      return <HamburgerMenu />;
+    } else {
+      return (
+        <>
+          <Navbar />
+          <Chalkboard />
+        </>
+      );
+    }
+  };
+
   return (
     <div className="App">
-      <Navbar />
-      <Chalkboard />
+      {renderMenu()}
       <Header />
       <About />
     </div>
