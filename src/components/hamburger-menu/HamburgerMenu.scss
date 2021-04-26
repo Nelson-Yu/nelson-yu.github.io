@@ -1,0 +1,47 @@
+@import '/src/assets/scss/variables';
+@import '/src/assets/scss/mixins';
+
+.hamburger_menu_container {
+  .hamburger_menu_button {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    z-index: 1111;
+  }
+
+  .bm-menu {
+    background: url(/assets/images/chalkboard.png);
+  }
+
+  .hambuger_menu_item {
+    margin: 2rem;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:nth-child(1) {
+      color: $blue-chalk;
+    }
+
+    &:nth-child(2) {
+      color: $green-chalk;
+    }
+
+    &:nth-child(3) {
+      color: $yellow-chalk;
+    }
+
+    &:nth-child(4) {
+      color: $magenta-chalk;
+    }
+
+    &:hover {
+      color: $white-chalk;
+    }
+
+    span {
+      padding: 1rem;
+    }
+  }
+}
