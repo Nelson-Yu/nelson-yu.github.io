@@ -8,7 +8,7 @@ const Navbar = () => {
         <a className="navbar_btn" href="#about">
           <span>About</span>
         </a>
-        <a className="navbar_btn" href="/#">
+        <a className="navbar_btn" href="#experience">
           <span>Experience</span>
         </a>
         <a className="navbar_btn" href="/#">
