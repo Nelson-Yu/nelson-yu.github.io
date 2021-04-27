@@ -12,6 +12,8 @@
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    position: relative;
+    background: url(/assets/images/chalkboard.png);
 
     a {
       position: relative;
@@ -22,31 +24,21 @@
 
       &:nth-child(1) {
         color: $blue-chalk;
-        background: url(/assets/images/chalk-border-blue.png);
-        background-size: 100% 100%;
       }
 
       &:nth-child(2) {
         color: $green-chalk;
-        background: url(/assets/images/chalk-border-green.png);
-        background-size: 100% 100%;
       }
 
       &:nth-child(3) {
         color: $yellow-chalk;
-        background: url(/assets/images/chalk-border-yellow.png);
-        background-size: 100% 100%;
       }
 
       &:nth-child(4) {
         color: $magenta-chalk;
-        background: url(/assets/images/chalk-border-magenta.png);
-        background-size: 100% 100%;
       }
 
       &:hover {
-        background: url(/assets/images/chalk-border.png);
-        background-size: 100% 100%;
         color: $white-chalk;
       }
 
