@@ -7,7 +7,7 @@
   z-index: 99;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
 
   @include td {
@@ -15,20 +15,35 @@
     margin: 10vh 12.5vw;
   }
 
-  .experience_title {
+  .experience_title,
+  .experience_education_title,
+  .experience_work_title {
     width: 100%;
     text-transform: uppercase;
     text-align: center;
+    margin: 2rem 0;
+
+    span {
+      position: relative;
+    }
+  }
+
+  .experience_title {
     color: $green-chalk;
     font-size: 3rem;
-    margin: 2rem 0;
 
     @include md {
       font-size: 2.5rem;
     }
+  }
 
-    span {
-      position: relative;
+  .experience_education_title,
+  .experience_work_title {
+    color: $white-chalk;
+    font-size: 2.5rem;
+
+    @include md {
+      font-size: 2rem;
     }
   }
 }

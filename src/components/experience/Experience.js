@@ -7,8 +7,16 @@ const Experience = () => {
       <div className="experience_title">
         <span>Experience</span>
       </div>
-      <div className="experience_education_container"></div>
-      <div className="experience_work_container"></div>
+      <div className="experience_education_container">
+        <div className="experience_education_title">
+          <span>Education</span>
+        </div>
+      </div>
+      <div className="experience_work_container">
+        <div className="experience_work_title">
+          <span>Work</span>
+        </div>
+      </div>
     </div>
   );
 };
