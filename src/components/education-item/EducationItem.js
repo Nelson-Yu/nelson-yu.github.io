@@ -3,7 +3,7 @@ import './EducationItem.scss';
 
 const EducationItem = () => {
   return (
-    <div>
+    <div className="education_item_container">
       <p>hello world</p>
     </div>
   );
