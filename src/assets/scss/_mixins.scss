@@ -23,3 +23,9 @@
     @content;
   }
 }
+
+@mixin sc {
+  @media (max-width: $small-computer-width) {
+    @content;
+  }
+}

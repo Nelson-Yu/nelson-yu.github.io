@@ -26,7 +26,11 @@ const HamburgerMenu = () => {
         <a className="hambuger_menu_item" href="#about" onClick={handleClose}>
           <span>About</span>
         </a>
-        <a className="hambuger_menu_item" href="#about" onClick={handleClose}>
+        <a
+          className="hambuger_menu_item"
+          href="#experience"
+          onClick={handleClose}
+        >
           <span>Experience</span>
         </a>
         <a className="hambuger_menu_item" href="#about" onClick={handleClose}>

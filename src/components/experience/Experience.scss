@@ -1,0 +1,44 @@
+@import '/src/assets/scss/variables';
+@import '/src/assets/scss/mixins';
+
+.experience_container {
+  padding-top: 100px;
+  margin: 0vh 12.5vw;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include td {
+    padding-top: 0;
+    margin: 10vh 12.5vw;
+  }
+
+  // Section Titles
+  .experience_title {
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 2rem 0;
+    color: $green-chalk;
+    font-size: 3rem;
+
+    @include md {
+      font-size: 2.5rem;
+    }
+
+    span {
+      position: relative;
+    }
+  }
+
+  // Vertical Timeline Component Override
+  .vertical-timeline {
+    margin-bottom: 2rem;
+
+    &:before {
+      background: rgba(225, 225, 225, 1);
+    }
+  }
+}
