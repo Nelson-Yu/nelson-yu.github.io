@@ -1,0 +1,66 @@
+@import '/src/assets/scss/variables';
+@import '/src/assets/scss/mixins';
+
+.vertical-timeline-element {
+  .vertical-timeline-element-icon {
+    background: url(/assets/images/chalkboard.png);
+    box-shadow: 0 0 0 4px rgb(225, 225, 225), inset 0 2px 0 rgba(0, 0, 0, 0.08),
+      0 3px 0 4px rgba(0, 0, 0, 0.05);
+  }
+
+  .vertical-timeline-element-content-arrow {
+    display: none;
+  }
+
+  .vertical-timeline-element-content {
+    background: transparent;
+    box-shadow: none;
+    padding: 0 1em;
+  }
+
+  .vertical-timeline-logo {
+    width: 50%;
+    height: auto;
+    margin-bottom: 1rem;
+
+    @include sc {
+      width: 40%;
+    }
+
+    @include md {
+      width: 100%;
+    }
+  }
+
+  .vertical-timeline-logo,
+  .vertical-timeline-location,
+  .vertical-timeline-role {
+    margin-bottom: 1rem;
+  }
+
+  .vertical-timeline-header {
+    font-size: 1.5rem;
+    color: $red-chalk;
+
+    @include md {
+      font-size: 1.25rem;
+    }
+
+    @include md-new-landscape {
+      font-size: 1.25rem;
+    }
+  }
+
+  .vertical-timeline-subheader,
+  .vertical-timeline-description {
+    font-size: 1.25rem;
+
+    @include md {
+      font-size: 1rem;
+    }
+
+    @include md-new-landscape {
+      font-size: 1rem;
+    }
+  }
+}
