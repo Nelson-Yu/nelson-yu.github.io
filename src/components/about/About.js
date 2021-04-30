@@ -64,7 +64,7 @@ const About = () => {
               Digital Lab
             </a>{' '}
             at BC Children&apos;s Hospital based in Vancouver, BC, Canada, where
-            we create impactful projects aimed at improving the wellbeing of
+            we create impactful projects aimed at improving the well-being of
             others.
           </p>
         </div>
