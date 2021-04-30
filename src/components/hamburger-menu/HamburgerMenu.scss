@@ -2,6 +2,8 @@
 @import '/src/assets/scss/mixins';
 
 .hamburger_menu_container {
+  font-family: $header-font;
+
   .hamburger_menu_button {
     position: fixed;
     top: 0;

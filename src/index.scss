@@ -1,3 +1,6 @@
+@import '/src/assets/scss/variables';
+@import '/src/assets/scss/mixins';
+
 html {
   scroll-behavior: smooth;
 }
@@ -7,8 +10,8 @@ body {
   height: 100%;
   width: 100%;
   margin: 0;
+  font-family: $body-font;
+  letter-spacing: 0.025rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: 'Fredericka the Great', cursive;
-  letter-spacing: 0.01rem;
 }

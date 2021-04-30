@@ -17,10 +17,11 @@
 
   .about_title {
     width: 100%;
-    text-transform: uppercase;
     text-align: center;
-    color: $blue-chalk;
+    text-transform: uppercase;
+    font-family: $header-font;
     font-size: 3rem;
+    color: $blue-chalk;
     margin: 2rem 0;
 
     @include md {
@@ -96,7 +97,7 @@
         margin: auto;
         font-size: 2rem;
         font-weight: 600;
-        font-family: 'Swanky and Moo Moo', cursive;
+        font-family: $polaroid-font;
 
         @include md {
           font-size: 1.25rem;
