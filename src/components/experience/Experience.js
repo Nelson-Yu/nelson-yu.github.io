@@ -1,9 +1,8 @@
 import React from 'react';
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from 'react-vertical-timeline-component';
+import { VerticalTimeline } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import ExperienceItem from '../experience-item/ExperienceItem';
+import experienceData from '../../data/experience';
 import './Experience.scss';
 
 const Experience = () => {
@@ -13,20 +12,19 @@ const Experience = () => {
         <span>Experience</span>
       </div>
       <VerticalTimeline animate={false}>
-        <VerticalTimelineElement
-          className="vertical-timeline-element--work"
-          contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
-          iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
-          // icon={}
-        >
-          <h3 className="vertical-timeline-element-title">Creative Director</h3>
-          <h4 className="vertical-timeline-element-subtitle">Miami, FL</h4>
-          <p>
-            Creative Direction, User Experience, Visual Design, Project
-            Management, Team Leading
-          </p>
-        </VerticalTimelineElement>
+        {experienceData.map((item) => (
+          <ExperienceItem
+            key={item.role}
+            type={item.type}
+            link={item.link}
+            logo={item.logo}
+            company={item.company}
+            location={item.location}
+            role={item.role}
+            timeline={item.timeline}
+            description={item.description}
+          />
+        ))}
       </VerticalTimeline>
     </div>
   );

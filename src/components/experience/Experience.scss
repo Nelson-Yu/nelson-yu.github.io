@@ -32,4 +32,13 @@
       position: relative;
     }
   }
+
+  // Vertical Timeline Component Override
+  .vertical-timeline {
+    margin-bottom: 2rem;
+
+    &:before {
+      background: rgba(225, 225, 225, 1);
+    }
+  }
 }
