@@ -3,6 +3,7 @@ import { isMobileOnly } from 'react-device-detect';
 import useDocumentDimensions from '../../hooks/useDocumentDimensions';
 import About from '../about/About';
 import Chalkboard from '../chalkboard/Chalkboard';
+import Development from '../development/Development';
 import Experience from '../experience/Experience';
 import HamburgerMenu from '../hamburger-menu/HamburgerMenu';
 import Header from '../header/Header';
@@ -31,6 +32,7 @@ const App = () => {
       <Header />
       <About />
       <Experience />
+      <Development />
     </div>
   );
 };

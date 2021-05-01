@@ -33,10 +33,14 @@ const HamburgerMenu = () => {
         >
           <span>Experience</span>
         </a>
-        <a className="hambuger_menu_item" href="#about" onClick={handleClose}>
+        <a
+          className="hambuger_menu_item"
+          href="#development"
+          onClick={handleClose}
+        >
           <span>Development</span>
         </a>
-        <a className="hambuger_menu_item" href="#about" onClick={handleClose}>
+        <a className="hambuger_menu_item" href="#contact" onClick={handleClose}>
           <span>Contact</span>
         </a>
       </Menu>

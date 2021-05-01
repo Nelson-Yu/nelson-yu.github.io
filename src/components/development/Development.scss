@@ -1,2 +1,39 @@
 @import '/src/assets/scss/variables';
 @import '/src/assets/scss/mixins';
+
+.development_container {
+  padding-top: 100px;
+  margin: 0vh 12.5vw;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include td {
+    padding-top: 0;
+    margin: 10vh 12.5vw;
+  }
+
+  .development_title {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $header-font;
+    color: $yellow-chalk;
+    font-size: 3rem;
+    margin: 2rem 0;
+
+    @include md {
+      font-size: 2rem;
+    }
+
+    @include md-new-landscape {
+      font-size: 2rem;
+    }
+
+    span {
+      position: relative;
+    }
+  }
+}
