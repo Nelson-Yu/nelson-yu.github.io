@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import projectsData from '../../data/projects';
+import ProjectDisplay from '../project-display/ProjectDisplay';
 import SlidingPane from 'react-sliding-pane';
 import 'react-sliding-pane/dist/react-sliding-pane.css';
 import './Development.scss';
-import ProjectFeature from '../project-feature/ProjectFeature';
 
 const Development = () => {
   const [openProject, setOpenProject] = useState(false);
@@ -71,7 +71,7 @@ const Development = () => {
             </div>
           </div>
         </div>
-        <ProjectFeature project={featureProject} />
+        <ProjectDisplay project={featureProject} />
       </SlidingPane>
     </div>
   );
