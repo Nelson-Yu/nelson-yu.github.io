@@ -6,7 +6,7 @@ const projectsData = [
     description:
       'LivePlanBe+ is a Digital Lab developed application in partnership with Painc BC. The goal is to enhance the well-being of all people living with pain through personalized support, recommendations and learning modules. This project is currently in development and is being built with a variation of the MERN stack, substituting ExpressJS with KoaJS, and GraophQL.',
     stack: ['MongoDB', 'KoaJS', 'NodeJS', 'React', 'GraphQL', 'Docker'],
-    screenshot: 'wip.png',
+    screenshots: ['wip.png'],
   },
   {
     title: 'Child Development & Rehabilitation (CDR)',
@@ -23,7 +23,7 @@ const projectsData = [
       'Docker',
       'Algolia',
     ],
-    screenshot: 'wip.png',
+    screenshots: ['wip.png'],
   },
   {
     title: 'Early Childhood Outside',
@@ -32,7 +32,7 @@ const projectsData = [
     description:
       "Early Childhood Outside, a Digital Lab developed project is an extension of an existing project called Outside Play. The overall goal of the project is to promote and educate caregivers and early childhood educators to embrace the many benefits that outdoor play can have on a child's growth. This is done through a variety of interactive videos and questionnaires to craft an Action Plan to for the participant to act on. This project was built utilizing MySQL, Laravel(PHP), and VueJS.",
     stack: ['MySQL', 'Laravel', 'Vue'],
-    screenshot: 'eco.png',
+    screenshots: ['eco-1.png', 'eco-2.png', 'eco-3.png'],
     link: 'https://eco.outsideplay.ca/en/pages/chapter-1-intro',
   },
   {
@@ -42,7 +42,7 @@ const projectsData = [
     description:
       'CSKT is a Digital Lab platform with the goal of teaching youth and families that they have the opportunity to participate in research, along with how that can directly impact lives of others. Users of the app are prompted to follow along an interactive journey, built with jQuery within Adobe Animate.',
     stack: ['Adobe Animate', 'jQuery'],
-    screenshot: 'cskt.png',
+    screenshots: ['cskt-1.png', 'cskt-2.png', 'cskt-3.png'],
     link: 'https://cskt.bcchdigital.ca/',
   },
   {
@@ -52,7 +52,7 @@ const projectsData = [
     description:
       "Activity Reporting is a Digital Lab application designed for internal use by the physicians at BC Children's Hospital Department of Pediatrics. This project allows physicians to track their annual activities within the hospital and out, while the Department of Pediatrics conducts internal data analysis. This app is built with Laravel as the back-end and React for the front-end.",
     stack: ['MySQL', 'Laravel', 'React'],
-    screenshot: 'ar.png',
+    screenshots: ['ar-1.png', 'ar-2.png', 'ar-3.png'],
   },
 ];
 

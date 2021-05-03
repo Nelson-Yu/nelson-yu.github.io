@@ -29,7 +29,7 @@ const Development = () => {
               tabIndex={0}
             >
               <img
-                src={`/assets/screenshots/${project.screenshot}`}
+                src={`/assets/screenshots/${project.screenshots[0]}`}
                 alt={project.title}
                 className="development_project_image"
               />
