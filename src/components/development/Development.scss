@@ -122,6 +122,10 @@
   margin-top: 0;
   background: url(/assets/images/chalkboard.png);
 
+  .slide-pane__content {
+    padding: 48px;
+  }
+
   .project_feature_button {
     position: fixed;
     top: 0;

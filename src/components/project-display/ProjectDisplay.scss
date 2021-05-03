@@ -1,2 +1,16 @@
 @import '/src/assets/scss/variables';
 @import '/src/assets/scss/mixins';
+
+.project_display_container {
+  width: 75vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  .project_display_screenshots {
+  }
+  .project_display_content {
+  }
+}
