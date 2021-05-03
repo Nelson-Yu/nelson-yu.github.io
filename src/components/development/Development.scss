@@ -56,6 +56,16 @@
       margin: 1.5%;
       cursor: pointer;
 
+      @include sc {
+        width: 45%;
+        margin: 2.5%;
+      }
+
+      @include md {
+        width: 90%;
+        margin: 5% 2.5%;
+      }
+
       &:before {
         content: '';
         display: block;
@@ -66,13 +76,6 @@
         top: -7%;
         background: url(/assets/images/tape.png) no-repeat;
         background-size: cover;
-
-        @include td {
-          width: 50%;
-          height: 14%;
-          left: 25%;
-          top: -7%;
-        }
       }
 
       img {
