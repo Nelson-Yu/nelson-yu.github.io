@@ -3,9 +3,20 @@ import projectsData from '../../data/projects';
 import SlidingPane from 'react-sliding-pane';
 import 'react-sliding-pane/dist/react-sliding-pane.css';
 import './Development.scss';
+import ProjectFeature from '../project-feature/ProjectFeature';
 
 const Development = () => {
   const [openProject, setOpenProject] = useState(false);
+  const [featureProject, setFeatureProject] = useState(null);
+
+  const handleOpenProject = (project) => {
+    setFeatureProject(project);
+    setOpenProject(true);
+  };
+
+  const handleCloseProject = () => {
+    setOpenProject(false);
+  };
 
   return (
     <div id="development" className="development_container">
@@ -18,10 +29,10 @@ const Development = () => {
             key={index}
             className={`development_project_polaroid development_project_polaroid_${index}`}
             onClick={() => {
-              setOpenProject(true);
+              handleOpenProject(project);
             }}
             onKeyDown={() => {
-              setOpenProject(true);
+              handleOpenProject(project);
             }}
             role="button"
             tabIndex={0}
@@ -42,18 +53,12 @@ const Development = () => {
         width="100%"
         from="bottom"
         hideHeader={true}
-        onRequestClose={() => {
-          setOpenProject(false);
-        }}
+        onRequestClose={handleCloseProject}
       >
         <div
           className="project_feature_button"
-          onClick={() => {
-            setOpenProject(false);
-          }}
-          onKeyDown={() => {
-            setOpenProject(false);
-          }}
+          onClick={handleCloseProject}
+          onKeyDown={handleCloseProject}
           role="button"
           tabIndex={0}
         >
@@ -66,6 +71,7 @@ const Development = () => {
             </div>
           </div>
         </div>
+        <ProjectFeature project={featureProject} />
       </SlidingPane>
     </div>
   );
