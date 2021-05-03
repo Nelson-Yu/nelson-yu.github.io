@@ -2,7 +2,7 @@
 @import '/src/assets/scss/mixins';
 
 .project_display_container {
-  width: 75vw;
+  width: 80vw;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -10,6 +10,74 @@
   align-items: center;
 
   .project_display_screenshots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .project_display_polaroid {
+      position: relative;
+      width: 30%;
+      height: auto;
+      background: #fcfcfc;
+      box-shadow: 0 0 10px #101010;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      margin: 1.5%;
+      cursor: pointer;
+
+      @include sc {
+        width: 45%;
+        margin: 2.5%;
+      }
+
+      @include md {
+        width: 90%;
+        margin: 5% 2.5%;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        width: 50%;
+        height: 14%;
+        position: absolute;
+        left: 25%;
+        top: -7%;
+        background: url(/assets/images/tape.png) no-repeat;
+        background-size: cover;
+      }
+
+      img {
+        display: block;
+        width: 90%;
+        height: auto;
+        margin: 5% 5%;
+        border-radius: 1%;
+        cursor: pointer;
+      }
+
+      span {
+        color: black;
+        margin: auto;
+        text-align: center;
+      }
+    }
+
+    .project_display_polaroid_0 {
+      transform: rotate(random(5) - 2.5 + deg);
+    }
+
+    .project_display_polaroid_1 {
+      transform: rotate(random(5) - 2.5 + deg);
+    }
+
+    .project_display_polaroid_2 {
+      transform: rotate(random(5) - 2.5 + deg);
+    }
   }
   .project_display_content {
   }
