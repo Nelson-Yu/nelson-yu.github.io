@@ -90,5 +90,77 @@
         text-align: center;
       }
     }
+
+    .development_project_polaroid_0 {
+      transform: rotate(random(5) - 2.5 + deg);
+    }
+    .development_project_polaroid_1 {
+      transform: rotate(random(5) - 2.5 + deg);
+    }
+    .development_project_polaroid_2 {
+      transform: rotate(random(5) - 2.5 + deg);
+    }
+    .development_project_polaroid_3 {
+      transform: rotate(random(5) - 2.5 + deg);
+    }
+    .development_project_polaroid_4 {
+      transform: rotate(random(5) - 2.5 + deg);
+    }
+  }
+}
+
+.slide-pane__overlay.overlay-after-open.project_feature_overlay {
+  background-color: transparent;
+  z-index: 1112;
+}
+
+.project_feature {
+  height: 100vh;
+  margin-top: 0;
+  background: url(/assets/images/chalkboard.png);
+
+  .project_feature_button {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    opacity: 0.8;
+
+    .project_feature_cross {
+      cursor: pointer;
+      height: 48px;
+      position: relative;
+      user-select: none;
+      width: 48px;
+      outline: none;
+
+      .project_feature_cross_1 {
+        transform: translateY(10px);
+
+        div {
+          background: $white-chalk;
+          height: 3px;
+          left: 8px;
+          position: absolute;
+          width: 32px;
+          top: 13px;
+          transform: rotate(45deg);
+        }
+      }
+
+      .project_feature_cross_2 {
+        transform: translateY(-10px);
+
+        div {
+          background: $white-chalk;
+          height: 3px;
+          left: 8px;
+          position: absolute;
+          width: 32px;
+          top: 33px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
   }
 }
