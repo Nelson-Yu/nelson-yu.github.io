@@ -19,10 +19,40 @@ const ProjectDisplay = ({ project }) => {
   return (
     <div className="project_display_container" style={{ color: 'white' }}>
       <div className="project_display_content">
-        <p>
-          {project.title}
-          {project.title}
-        </p>
+        <div className="project_display_title">{project.title}</div>
+        {project.link && (
+          <div className="project_display_link">
+            <span>Link:</span>{' '}
+            <a href={project.link} target="_blank" rel="noreferrer">
+              {project.link}
+            </a>
+          </div>
+        )}
+        <div className="project_display_date">
+          <span>Date:</span> {project.date}
+        </div>
+        <div className="project_display_role">
+          <span>Role:</span> {project.role}
+        </div>
+        <div className="project_display_description">
+          <span>Description:</span>
+          <br />
+          {project.description}
+        </div>
+        <div className="project_display_stack">
+          <span>Stack:</span>
+          <br />
+          <div className="project_display_stack_icons">
+            {project.stack.map((screenshot, index) => (
+              <img
+                key={index}
+                className={`project_display_stack_icon_${index}`}
+                src={`/assets/tech/${screenshot}`}
+                alt={screenshot}
+              />
+            ))}
+          </div>
+        </div>
       </div>
       <div className="project_display_screenshots">
         {project.screenshots.map((screenshot, index) => (

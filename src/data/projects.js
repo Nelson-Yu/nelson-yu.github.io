@@ -40,7 +40,7 @@ const projectsData = [
       "Early Childhood Outside, a Digital Lab developed project is an extension of an existing project called Outside Play. The overall goal of the project is to promote and educate caregivers and early childhood educators to embrace the many benefits that outdoor play can have on a child's growth. This is done through a variety of interactive videos and questionnaires to craft an Action Plan to for the participant to act on. This project was built utilizing MySQL, Laravel(PHP), and VueJS.",
     stack: ['mysql.svg', 'laravel.svg', 'vue.svg'],
     screenshots: ['eco-1.png', 'eco-2.png', 'eco-3.png'],
-    link: 'https://eco.outsideplay.ca/en/pages/chapter-1-intro',
+    link: 'eco.outsideplay.ca',
   },
   {
     title: 'Child-Sized Knowledge Translation (CSKT)',
@@ -50,7 +50,7 @@ const projectsData = [
       'CSKT is a Digital Lab platform with the goal of teaching youth and families that they have the opportunity to participate in research, along with how that can directly impact lives of others. Users of the app are prompted to follow along an interactive journey, built with jQuery within Adobe Animate.',
     stack: ['animate.svg', 'jquery.svg'],
     screenshots: ['cskt-1.png', 'cskt-2.png', 'cskt-3.png'],
-    link: 'https://cskt.bcchdigital.ca/',
+    link: 'cskt.bcchdigital.ca',
   },
   {
     title: 'Activity Reporting',
