@@ -11,10 +11,10 @@ const Navbar = () => {
         <a className="navbar_btn" href="#experience">
           <span>Experience</span>
         </a>
-        <a className="navbar_btn" href="/#">
+        <a className="navbar_btn" href="#development">
           <span>Development</span>
         </a>
-        <a className="navbar_btn" href="/#">
+        <a className="navbar_btn" href="#contact">
           <span>Contact</span>
         </a>
       </div>

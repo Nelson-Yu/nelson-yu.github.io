@@ -1,0 +1,177 @@
+@import '/src/assets/scss/variables';
+@import '/src/assets/scss/mixins';
+
+.development_container {
+  height: 100vh;
+  padding-top: 100px;
+  margin: 0vh 12.5vw;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  @include td {
+    padding-top: 0;
+    margin: 10vh 12.5vw;
+  }
+
+  .development_title {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $header-font;
+    color: $yellow-chalk;
+    font-size: 3rem;
+    margin: 2rem 0;
+
+    @include md {
+      font-size: 2rem;
+    }
+
+    @include md-new-landscape {
+      font-size: 2rem;
+    }
+
+    span {
+      position: relative;
+    }
+  }
+
+  .development_projects_container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .development_project_polaroid {
+      position: relative;
+      width: 30%;
+      height: auto;
+      background: #fcfcfc;
+      box-shadow: 0 0 10px #101010;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      margin: 1.5%;
+      cursor: pointer;
+
+      @include sc {
+        width: 45%;
+        margin: 2.5%;
+      }
+
+      @include md {
+        width: 90%;
+        margin: 5% 2.5%;
+      }
+
+      &:before {
+        content: '';
+        display: block;
+        width: 50%;
+        height: 14%;
+        position: absolute;
+        left: 25%;
+        top: -7%;
+        background: url(/assets/images/tape.png) no-repeat;
+        background-size: cover;
+      }
+
+      img {
+        display: block;
+        width: 90%;
+        height: auto;
+        margin: 5% 5% 0%;
+        border-radius: 1%;
+        cursor: pointer;
+      }
+
+      span {
+        color: black;
+        margin: auto;
+        text-align: center;
+      }
+    }
+
+    .development_project_polaroid_0 {
+      transform: rotate(random(5) - 2.5 + deg);
+    }
+
+    .development_project_polaroid_1 {
+      transform: rotate(random(5) - 2.5 + deg);
+    }
+
+    .development_project_polaroid_2 {
+      transform: rotate(random(5) - 2.5 + deg);
+    }
+
+    .development_project_polaroid_3 {
+      transform: rotate(random(5) - 2.5 + deg);
+    }
+
+    .development_project_polaroid_4 {
+      transform: rotate(random(5) - 2.5 + deg);
+    }
+  }
+}
+
+.slide-pane__overlay.overlay-after-open.project_feature_overlay {
+  background-color: transparent;
+  z-index: 1112;
+}
+
+.project_feature {
+  height: 100vh;
+  margin-top: 0;
+  background: url(/assets/images/chalkboard.png);
+
+  .slide-pane__content {
+    padding: 48px;
+  }
+
+  .project_feature_button {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    opacity: 0.8;
+
+    .project_feature_cross {
+      cursor: pointer;
+      height: 48px;
+      position: relative;
+      user-select: none;
+      width: 48px;
+      outline: none;
+
+      .project_feature_cross_1 {
+        transform: translateY(10px);
+
+        div {
+          background: $white-chalk;
+          height: 3px;
+          left: 8px;
+          position: absolute;
+          width: 32px;
+          top: 13px;
+          transform: rotate(45deg);
+        }
+      }
+
+      .project_feature_cross_2 {
+        transform: translateY(-10px);
+
+        div {
+          background: $white-chalk;
+          height: 3px;
+          left: 8px;
+          position: absolute;
+          width: 32px;
+          top: 33px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+}
