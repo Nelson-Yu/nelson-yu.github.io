@@ -51,7 +51,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
-      align-items: center;
+      align-items: flex-start;
 
       div {
         display: flex;
@@ -93,6 +93,17 @@
         textarea {
           resize: none;
         }
+
+        span {
+          color: $red-chalk;
+        }
+
+        .input-error {
+          border-image: url(/assets/images/chalk-red-border.png) 7 repeat;
+          -webkit-border-image: url(/assets/images/chalk-red-border.png) 7
+            repeat;
+          -o-border-image: url(/assets/images/chalk-red-border.png) 7 repeat;
+        }
       }
 
       .contact_form_name,
@@ -125,8 +136,22 @@
       }
 
       .contact_form_button {
-        width: 50%;
         margin: 0 auto 1rem;
+        font-family: $body-font;
+        font-size: 1.5rem;
+        color: $yellow-chalk;
+        padding: 0.5rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+
+        &:focus {
+          outline: none;
+        }
+
+        &:hover {
+          color: $white-chalk;
+        }
       }
     }
   }
