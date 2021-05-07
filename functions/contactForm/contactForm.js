@@ -6,13 +6,13 @@ const {
 } = process.env;
 
 exports.handler = async function (event, context, callback) {
-  const { message, senderEmail, senderName } = JSON.parse(event.body);
+  const { message, senderEmail, senderName, subject } = JSON.parse(event.body);
   client.setApiKey(SENDGRID_API_KEY);
 
   const data = {
     to: SENDGRID_TO_EMAIL,
     from: SENDGRID_FROM_EMAIL,
-    subject: `Portfolio Contact Form - ${senderName} (${senderEmail})`,
+    subject: `Portfolio Contact Form: ${subject} - ${senderName} (${senderEmail})`,
     html: message,
   };
 
