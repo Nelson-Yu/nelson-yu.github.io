@@ -1,14 +1,18 @@
 const client = require('@sendgrid/mail');
-const { SENDGRID_API_KEY, SENDGRID_TO_EMAIL } = process.env;
+const {
+  SENDGRID_API_KEY,
+  SENDGRID_TO_EMAIL,
+  SENDGRID_FROM_EMAIL,
+} = process.env;
 
 exports.handler = async function (event, context, callback) {
-  const { subject, message, senderEmail } = JSON.parse(event.body);
+  const { message, senderEmail, senderName } = JSON.parse(event.body);
   client.setApiKey(SENDGRID_API_KEY);
 
   const data = {
     to: SENDGRID_TO_EMAIL,
-    from: senderEmail,
-    subject: subject,
+    from: SENDGRID_FROM_EMAIL,
+    subject: `Portfolio Contact Form - ${senderName} (${senderEmail})`,
     html: message,
   };
 
