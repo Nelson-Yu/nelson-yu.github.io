@@ -37,4 +37,97 @@
       position: relative;
     }
   }
+
+  .contact_form_container {
+    position: relative;
+    width: 50vw;
+    margin: 0 auto 2rem;
+
+    @include td {
+      width: 100%;
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 1rem;
+
+        label {
+          font-size: 1.5rem;
+          color: $yellow-chalk;
+
+          @include td {
+            font-size: 1.25rem;
+          }
+        }
+
+        input,
+        textarea {
+          font-family: $body-font;
+          font-size: 1.5rem;
+          color: $white-chalk;
+          padding: 0.5rem;
+          caret-color: $white-chalk;
+          background: transparent;
+          border-width: 0.5rem;
+          border-style: solid;
+          border-image: url(/assets/images/chalk-border.png) 7 repeat;
+          -webkit-border-image: url(/assets/images/chalk-border.png) 7 repeat;
+          -o-border-image: url(/assets/images/chalk-border.png) 7 repeat;
+
+          &:focus {
+            outline: none;
+          }
+
+          @include td {
+            font-size: 1.25rem;
+          }
+        }
+
+        textarea {
+          resize: none;
+        }
+      }
+
+      .contact_form_name,
+      .contact_form_email {
+        width: 47.5%;
+
+        @include sc {
+          width: 100%;
+        }
+      }
+
+      .contact_form_name {
+        margin-right: 2.5%;
+
+        @include sc {
+          margin-right: 0%;
+        }
+      }
+      .contact_form_email {
+        margin-left: 2.5%;
+
+        @include sc {
+          margin-left: 0%;
+        }
+      }
+
+      .contact_form_subject,
+      .contact_form_message {
+        width: 100%;
+      }
+
+      .contact_form_button {
+        width: 50%;
+        margin: 0 auto 1rem;
+      }
+    }
+  }
 }
