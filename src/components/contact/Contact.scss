@@ -39,15 +39,35 @@
   }
 
   .contact_form_container {
-    position: relative;
+    min-height: 70vh;
     width: 50vw;
     margin: 0 auto 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
 
     @include td {
       width: 100%;
     }
 
+    .contect_form_content {
+      position: relative;
+      text-align: center;
+      font-size: 1.25rem;
+      margin: 0.5rem 0;
+
+      @include md {
+        font-size: 1rem;
+      }
+
+      @include md-new-landscape {
+        font-size: 1rem;
+      }
+    }
+
     form {
+      position: relative;
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-start;
@@ -177,6 +197,9 @@
         }
 
         &:hover {
+          span {
+            color: $white-chalk;
+          }
           img {
             -webkit-animation: shake 3s infinite;
             -moz-animation: shake 3s infinite;
@@ -184,31 +207,32 @@
           }
         }
       }
-
-      // .contact_form_button[fly='fly'] {
-      //   .contact_form_submit {
-      //     -webkit-animation: slide 1.25s ease-in-out forwards;
-      //     -moz-animation: slide 1.25s ease-in-out forwards;
-      //     animation: slide 1.25s ease-in-out forwards;
-      //   }
-      //   img {
-      //     -webkit-animation: plane-travel 1.25s ease-in-out forwards;
-      //     -moz-animation: plane-travel 1.25s ease-in-out forwards;
-      //     animation: plane-travel 1.25s ease-in-out forwards;
-      //   }
-      // }
     }
   }
 
   .contact_form_sent,
-  .contact_form_error {
+  .contact_form_error,
+  .contact_form_sending {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     text-align: center;
+  }
+
+  .contact_form_sent,
+  .contact_form_error {
     font-size: 1.5rem;
     color: $white-chalk;
-    margin: 2rem 0;
+    margin: 0 0 2rem;
 
     @include td {
       font-size: 1.25rem;
+    }
+
+    span {
+      position: relative;
     }
 
     a {
@@ -222,9 +246,8 @@
   }
 
   .contact_form_sending {
-    text-align: center;
-
     .contact_form_plane_container {
+      position: relative;
       -webkit-animation: plane-y 1.5s alternate infinite linear;
       -moz-animation: plane-y 1.5s alternate infinite linear;
       animation: plane-y 1.5s alternate infinite linear;
@@ -242,6 +265,7 @@
     }
 
     span {
+      position: relative;
       font-size: 1.5rem;
       margin: 2rem auto;
       color: $white-chalk;
