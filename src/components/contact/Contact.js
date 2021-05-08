@@ -3,6 +3,7 @@ import './Contact.scss';
 
 const Contact = () => {
   const [showForm, setShowForm] = useState(true);
+  const [showSending, setShowSending] = useState(false);
   const [showSent, setShowSent] = useState(false);
   const [showError, setShowError] = useState(false);
   const [contactFormData, setContactFormData] = useState({
@@ -17,7 +18,6 @@ const Contact = () => {
     subject: false,
     message: false,
   });
-  const [sendAnimation, setSendAnimation] = useState('');
 
   const onFormChange = (e) => {
     setFormErrors({ ...formErrors, [e.target.name]: false });
@@ -42,22 +42,39 @@ const Contact = () => {
     setFormErrors({ ...errors });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    for (const prop in contactFormData) {
-      validateFormFields(prop, contactFormData[prop]);
+    // for (const prop in contactFormData) {
+    //   validateFormFields(prop, contactFormData[prop]);
+    // }
+
+    // const { senderName, senderEmail, subject, message } = formErrors;
+    // if ((senderName, senderEmail, subject, message)) {
+    //   return;
+    // }
+
+    setShowForm(false);
+    setShowSending(true);
+
+    await new Promise((resolve) => setTimeout(resolve, 5000));
+    const response = await fetch(
+      'https://nelson-yu.netlify.app/.netlify/functions/contactForm',
+      {
+        method: 'POST',
+        body: JSON.stringify(contactFormData),
+      }
+    );
+
+    console.log(response);
+
+    setShowSending(false);
+    if (response.status >= 200 && response.status <= 299) {
+      setShowSent(true);
+    } else {
+      setShowError(true);
+      console.log(response.status, response.statusText);
     }
-
-    const { senderName, senderEmail, subject, message } = formErrors;
-    if ((senderName, senderEmail, subject, message)) {
-      console.log('error');
-      return;
-    }
-
-    setSendAnimation('fly');
-
-    console.log('a-ok');
   };
 
   return (
@@ -135,11 +152,7 @@ const Contact = () => {
               </span>
             </div>
             <div className="contact_form_submit">
-              <button
-                className="contact_form_button"
-                type="submit"
-                fly={sendAnimation}
-              >
+              <button className="contact_form_button" type="submit">
                 <div className="contact_form_plane_container">
                   <img src="/assets/icons/plane.png" alt="Send" />
                 </div>
@@ -148,13 +161,25 @@ const Contact = () => {
             </div>
           </form>
         )}
-        {showSent && (
+        {!showForm && showSending && (
+          <div className="contact_form_sending">
+            <div className="contact_form_plane_container">
+              <img
+                src="/assets/icons/plane.svg"
+                alt="Sending"
+                className="contact_form_plane"
+              />
+            </div>
+            <span>Your message is being sent...</span>
+          </div>
+        )}
+        {!showForm && showSent && (
           <div className="contact_form_sent">
             Thanks for taking time to reach out! I&apos;ll try my best to get
             back to you as soon as possible.
           </div>
         )}
-        {showError && (
+        {!showForm && showError && (
           <div className="contact_form_error">
             Oops! Your message was unable to be sent. Please try again at a
             later time or e-mail me directly at{' '}

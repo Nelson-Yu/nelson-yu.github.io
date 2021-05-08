@@ -185,18 +185,18 @@
         }
       }
 
-      .contact_form_button[fly='fly'] {
-        .contact_form_submit {
-          -webkit-animation: slide 1.25s ease-in-out forwards;
-          -moz-animation: slide 1.25s ease-in-out forwards;
-          animation: slide 1.25s ease-in-out forwards;
-        }
-        img {
-          -webkit-animation: plane-travel 1.25s ease-in-out forwards;
-          -moz-animation: plane-travel 1.25s ease-in-out forwards;
-          animation: plane-travel 1.25s ease-in-out forwards;
-        }
-      }
+      // .contact_form_button[fly='fly'] {
+      //   .contact_form_submit {
+      //     -webkit-animation: slide 1.25s ease-in-out forwards;
+      //     -moz-animation: slide 1.25s ease-in-out forwards;
+      //     animation: slide 1.25s ease-in-out forwards;
+      //   }
+      //   img {
+      //     -webkit-animation: plane-travel 1.25s ease-in-out forwards;
+      //     -moz-animation: plane-travel 1.25s ease-in-out forwards;
+      //     animation: plane-travel 1.25s ease-in-out forwards;
+      //   }
+      // }
     }
   }
 
@@ -217,6 +217,37 @@
 
       &:visited {
         color: $blue-chalk;
+      }
+    }
+  }
+
+  .contact_form_sending {
+    text-align: center;
+
+    .contact_form_plane_container {
+      -webkit-animation: plane-y 1.5s alternate infinite linear;
+      -moz-animation: plane-y 1.5s alternate infinite linear;
+      animation: plane-y 1.5s alternate infinite linear;
+    }
+
+    .contact_form_plane {
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+      display: block;
+      margin: 0rem auto 2rem;
+      -webkit-animation: plane-fly 3s forwards infinite ease-in-out;
+      -moz-animation: plane-fly 3s forwards infinite ease-in-out;
+      animation: plane-fly 3s forwards infinite ease-in-out;
+    }
+
+    span {
+      font-size: 1.5rem;
+      margin: 2rem auto;
+      color: $white-chalk;
+
+      @include td {
+        font-size: 1.25rem;
       }
     }
   }
@@ -281,28 +312,48 @@
   }
 }
 
-@keyframes plane-travel {
+@keyframes plane-y {
   0% {
-    -webkit-transform: translateX(0) rotate(20deg);
-    -moz-transform: translateX(0) rotate(20deg);
-    transform: translateX(0) rotate(20deg);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    transform: translateY(0px);
   }
   100% {
-    -webkit-transform: translateX(175px) rotate(20deg);
-    -moz-transform: translateX(175px) rotate(20deg);
-    transform: translateX(175px) rotate(20deg);
+    -webkit-transform: translateY(25px);
+    -moz-transform: translateY(25px);
+    transform: translateY(25px);
   }
 }
 
-@keyframes slide {
+@keyframes plane-fly {
   0% {
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    transform: translateX(0);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  40% {
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    transform: rotate(10deg);
+  }
+  60% {
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+  70% {
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    transform: rotate(-5deg);
   }
   100% {
-    -webkit-transform: translateX(175px);
-    -moz-transform: translateX(175px);
-    transform: translateX(175px);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
 }
