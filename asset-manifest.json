@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.e521dfe2.chunk.css",
-    "main.js": "/static/js/main.a17c31c8.chunk.js",
-    "main.js.map": "/static/js/main.a17c31c8.chunk.js.map",
+    "main.css": "/static/css/main.74d02add.chunk.css",
+    "main.js": "/static/js/main.61f1bdb1.chunk.js",
+    "main.js.map": "/static/js/main.61f1bdb1.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.8f60f1c0.js",
     "runtime-main.js.map": "/static/js/runtime-main.8f60f1c0.js.map",
     "static/css/2.e5aa3c10.chunk.css": "/static/css/2.e5aa3c10.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.4604986c.chunk.js.map": "/static/js/2.4604986c.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.e5aa3c10.chunk.css.map": "/static/css/2.e5aa3c10.chunk.css.map",
-    "static/css/main.e521dfe2.chunk.css.map": "/static/css/main.e521dfe2.chunk.css.map",
+    "static/css/main.74d02add.chunk.css.map": "/static/css/main.74d02add.chunk.css.map",
     "static/js/2.4604986c.chunk.js.LICENSE.txt": "/static/js/2.4604986c.chunk.js.LICENSE.txt",
     "static/media/Contact.scss": "/static/media/chalk-red-border.81cb5ac0.png",
     "static/media/Navbar.scss": "/static/media/chalkboard.22d74019.png"
@@ -19,7 +19,7 @@
     "static/js/runtime-main.8f60f1c0.js",
     "static/css/2.e5aa3c10.chunk.css",
     "static/js/2.4604986c.chunk.js",
-    "static/css/main.e521dfe2.chunk.css",
-    "static/js/main.a17c31c8.chunk.js"
+    "static/css/main.74d02add.chunk.css",
+    "static/js/main.61f1bdb1.chunk.js"
   ]
 }
