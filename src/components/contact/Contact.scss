@@ -56,7 +56,7 @@
       div {
         display: flex;
         flex-direction: column;
-        margin: 0 0 1rem;
+        margin: 0 0 0.5rem;
 
         label {
           font-size: 1.5rem;
@@ -80,7 +80,6 @@
           border-image: url(/assets/images/chalk-border.png) 7 repeat;
           -webkit-border-image: url(/assets/images/chalk-border.png) 7 repeat;
           -o-border-image: url(/assets/images/chalk-border.png) 7 repeat;
-
           &:focus {
             outline: none;
           }
@@ -95,7 +94,12 @@
         }
 
         span {
+          visibility: hidden;
           color: $red-chalk;
+        }
+
+        .error-text {
+          visibility: visible;
         }
 
         .input-error {
@@ -135,24 +139,149 @@
         width: 100%;
       }
 
-      .contact_form_button {
+      .contact_form_submit {
         margin: 0 auto 1rem;
-        font-family: $body-font;
-        font-size: 1.5rem;
-        color: $yellow-chalk;
-        padding: 0.5rem;
+      }
+
+      .contact_form_button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background: transparent;
-        border: none;
+        border: double 0.25rem rgba($color: #fff, $alpha: 0.8);
         cursor: pointer;
+        overflow: hidden;
+
+        span {
+          font-family: $body-font;
+          visibility: visible;
+          color: $yellow-chalk;
+          font-size: 1.5rem;
+          margin: 0 1rem;
+
+          @include td {
+            font-size: 1.25rem;
+          }
+        }
+
+        img {
+          width: 3rem;
+          height: 3rem;
+          -webkit-animationtransform: rotate(20deg);
+          -moz-transform: rotate(20deg);
+          transform: rotate(20deg);
+        }
 
         &:focus {
           outline: none;
         }
 
         &:hover {
-          color: $white-chalk;
+          img {
+            -webkit-animation: shake 3s infinite;
+            -moz-animation: shake 3s infinite;
+            animation: shake 3s infinite;
+          }
+        }
+      }
+
+      .contact_form_button[fly='fly'] {
+        .contact_form_submit {
+          -webkit-animation: slide 1.25s ease-in-out forwards;
+          -moz-animation: slide 1.25s ease-in-out forwards;
+          animation: slide 1.25s ease-in-out forwards;
+        }
+        img {
+          -webkit-animation: plane-travel 1.25s ease-in-out forwards;
+          -moz-animation: plane-travel 1.25s ease-in-out forwards;
+          animation: plane-travel 1.25s ease-in-out forwards;
         }
       }
     }
+  }
+}
+
+// Keyframe Animations
+@keyframes shake {
+  0% {
+    -webkit-transform: translate(1px, 1px) rotate(20deg);
+    -moz-transform: translate(1px, 1px) rotate(20deg);
+    transform: translate(1px, 1px) rotate(20deg);
+  }
+  10% {
+    -webkit-transform: translate(0px, 0px) rotate(20deg);
+    -moz-transform: translate(0px, 0px) rotate(20deg);
+    transform: translate(0px, 0px) rotate(20deg);
+  }
+  20% {
+    -webkit-transform: translate(-1px, -1px) rotate(19deg);
+    -moz-transform: translate(-1px, -1px) rotate(19deg);
+    transform: translate(-1px, -1px) rotate(19deg);
+  }
+  30% {
+    -webkit-transform: translate(0px, -1px) rotate(19deg);
+    -moz-transform: translate(0px, -1px) rotate(19deg);
+    transform: translate(0px, -1px) rotate(19deg);
+  }
+  40% {
+    -webkit-transform: translate(1px, 1px) rotate(19deg);
+    -moz-transform: translate(1px, 1px) rotate(19deg);
+    transform: translate(1px, 1px) rotate(19deg);
+  }
+  50% {
+    -webkit-transform: translate(1px, 2px) rotate(18deg);
+    -moz-transform: translate(1px, 2px) rotate(18deg);
+    transform: translate(1px, 2px) rotate(18deg);
+  }
+  60% {
+    -webkit-transform: translate(0px, 1px) rotate(18deg);
+    -moz-transform: translate(0px, 1px) rotate(18deg);
+    transform: translate(0px, 1px) rotate(18deg);
+  }
+  70% {
+    -webkit-transform: translate(-1px, -1px) rotate(19deg);
+    -moz-transform: translate(-1px, -1px) rotate(19deg);
+    transform: translate(-1px, -1px) rotate(19deg);
+  }
+  80% {
+    -webkit-transform: translate(0px, -2px) rotate(19deg);
+    -moz-transform: translate(0px, -2px) rotate(19deg);
+    transform: translate(0px, -2px) rotate(19deg);
+  }
+  90% {
+    -webkit-transform: translate(1px, -1px) rotate(20deg);
+    -moz-transform: translate(1px, -1px) rotate(20deg);
+    transform: translate(1px, -1px) rotate(20deg);
+  }
+  100% {
+    -webkit-transform: translate(2px, 0px) rotate(20deg);
+    -moz-transform: translate(2px, 0px) rotate(20deg);
+    transform: translate(2px, 0px) rotate(20deg);
+  }
+}
+
+@keyframes plane-travel {
+  0% {
+    -webkit-transform: translateX(0) rotate(20deg);
+    -moz-transform: translateX(0) rotate(20deg);
+    transform: translateX(0) rotate(20deg);
+  }
+  100% {
+    -webkit-transform: translateX(175px) rotate(20deg);
+    -moz-transform: translateX(175px) rotate(20deg);
+    transform: translateX(175px) rotate(20deg);
+  }
+}
+
+@keyframes slide {
+  0% {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(175px);
+    -moz-transform: translateX(175px);
+    transform: translateX(175px);
   }
 }
