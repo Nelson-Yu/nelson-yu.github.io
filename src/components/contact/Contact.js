@@ -148,16 +148,20 @@ const Contact = () => {
             </div>
           </form>
         )}
-        <div className="contact_form_sent">
-          Thanks for taking time to reach out! I&apos;ll try my best to get back
-          to you as soon as possible.
-        </div>
-        <div className="contact_form_error">
-          Oops! Your message was unable to be sent. Please try again at a later
-          time or e-mail me directly at{' '}
-          <a href="mailto:nelson.tm.yu@gmail.com">nelson.tm.yu@gmail.com</a>.
-          Thanks!
-        </div>
+        {showSent && (
+          <div className="contact_form_sent">
+            Thanks for taking time to reach out! I&apos;ll try my best to get
+            back to you as soon as possible.
+          </div>
+        )}
+        {showError && (
+          <div className="contact_form_error">
+            Oops! Your message was unable to be sent. Please try again at a
+            later time or e-mail me directly at{' '}
+            <a href="mailto:nelson.tm.yu@gmail.com">nelson.tm.yu@gmail.com</a>.
+            Thanks!
+          </div>
+        )}
       </div>
     </div>
   );

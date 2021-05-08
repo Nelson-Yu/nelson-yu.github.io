@@ -199,6 +199,27 @@
       }
     }
   }
+
+  .contact_form_sent,
+  .contact_form_error {
+    text-align: center;
+    font-size: 1.5rem;
+    color: $white-chalk;
+    margin: 2rem 0;
+
+    @include td {
+      font-size: 1.25rem;
+    }
+
+    a {
+      color: $blue-chalk;
+      text-decoration: none;
+
+      &:visited {
+        color: $blue-chalk;
+      }
+    }
+  }
 }
 
 // Keyframe Animations
