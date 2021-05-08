@@ -4,7 +4,7 @@ const projectsData = [
     date: 'Mar 2021',
     role: 'App Architect, Full-Stack Developer',
     description:
-      'LivePlanBe+ is a Digital Lab developed application in partnership with Painc BC. The goal is to enhance the well-being of all people living with pain through personalized support, recommendations and learning modules. This project is currently in development and is being built with a variation of the MERN stack, substituting ExpressJS with KoaJS, and GraophQL.',
+      'LivePlanBe+ is a Digital Lab developed application in partnership with Painc BC. The goal is to enhance the well-being of all people living with pain through personalized support, recommendations and learning modules. This project is currently in development and is being built with a variation of the MERN stack, substituting ExpressJS with KoaJS, and GraphQL.',
     stack: [
       'mongodb.svg',
       'koa.svg',
