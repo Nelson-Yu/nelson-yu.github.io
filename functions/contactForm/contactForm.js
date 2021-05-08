@@ -16,13 +16,6 @@ exports.handler = async function (event, context, callback) {
     html: message,
   };
 
-  headers: {
-    /* Required for CORS support to work */
-    'Access-Control-Allow-Origin': '*',
-    /* Required for cookies, authorization headers with HTTPS */
-    'Access-Control-Allow-Credentials': true
-  },
-
   try {
     await client.send(data);
     return {
@@ -32,7 +25,7 @@ exports.handler = async function (event, context, callback) {
         /* Required for CORS support to work */
         'Access-Control-Allow-Origin': '*',
         /* Required for cookies, authorization headers with HTTPS */
-        'Access-Control-Allow-Credentials': true
+        'Access-Control-Allow-Credentials': true,
       },
     };
   } catch (err) {
@@ -43,7 +36,7 @@ exports.handler = async function (event, context, callback) {
         /* Required for CORS support to work */
         'Access-Control-Allow-Origin': '*',
         /* Required for cookies, authorization headers with HTTPS */
-        'Access-Control-Allow-Credentials': true
+        'Access-Control-Allow-Credentials': true,
       },
     };
   }
