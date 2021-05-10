@@ -64,6 +64,15 @@
       @include md-new-landscape {
         font-size: 1rem;
       }
+
+      a {
+        color: $blue-chalk;
+        text-decoration: none;
+
+        &:visited {
+          color: $blue-chalk;
+        }
+      }
     }
 
     form {

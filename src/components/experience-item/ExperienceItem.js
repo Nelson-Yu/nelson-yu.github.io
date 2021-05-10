@@ -25,13 +25,10 @@ const ExperienceItem = ({
           className="vertical-timeline-logo"
         />
       </a>
-      <div className="vertical-timeline-location">
-        <div className="vertical-timeline-header">{company}</div>
-        <div className="vertical-timeline-subheader">{location}</div>
-      </div>
       <div className="vertical-timeline-role">
         <div className="vertical-timeline-header">{role}</div>
         <div className="vertical-timeline-subheader">{timeline}</div>
+        <div className="vertical-timeline-subheader">{location}</div>
       </div>
       {description && (
         <p className="vertical-timeline-description">{description}</p>

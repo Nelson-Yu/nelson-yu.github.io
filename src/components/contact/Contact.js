@@ -84,7 +84,16 @@ const Contact = () => {
           <div>
             <div className="contect_form_content">
               Feel free to leave me a message if you&apos;re interested in
-              learning more about me and what I do!
+              learning more about me and what I do! Alternatively, you can also
+              reach me via <a href="mailto:nelson.tm.yu@gmail.com">e-mail</a> or{' '}
+              <a
+                href="https://www.linkedin.com/in/nelson-yu/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
+              .
             </div>
             <form onSubmit={handleSubmit} noValidate>
               <div className="contact_form_name">

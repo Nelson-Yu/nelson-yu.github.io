@@ -44,14 +44,16 @@ const About = () => {
         <div className="about_profile_container">
           <p>
             Hello! I&apos;m a software developer driven by curiosity and passion
-            to explore the endless abyss of programming and technology.{' '}
+            to explore the endless abyss of programming and technology. I strive
+            to be a developer that is equally proficient at programming and
+            communicating.{' '}
           </p>
           <p>
             I enjoy the many aspects of being a diverse software developer, such
             as: building responsive and full-stack web applications, DevOps
-            engineering, mentoring, and many more. Nowadays, you&apos;ll also
-            find me dipping my toes into my budding interest of Artificial
-            Intelligence (AI).
+            engineering, mentoring other developers, and many more. Nowadays,
+            you&apos;ll also find me dipping my toes into my budding interest of
+            Artificial Intelligence (AI).
           </p>
           <p>
             Currently, I&apos;m a software developer for{' '}
