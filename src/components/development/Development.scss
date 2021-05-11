@@ -77,6 +77,12 @@
         background-size: cover;
       }
 
+      &:hover {
+        span {
+          color: #c4353d;
+        }
+      }
+
       img {
         display: block;
         width: 90%;
