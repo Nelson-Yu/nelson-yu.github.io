@@ -164,10 +164,10 @@ const Contact = () => {
               </div>
               <div className="contact_form_submit">
                 <button className="contact_form_button" type="submit">
+                  <span>Submit</span>
                   <div className="contact_form_plane_container">
                     <img src="/assets/icons/plane.png" alt="Send" />
                   </div>
-                  <span>Submit</span>
                 </button>
               </div>
             </form>
