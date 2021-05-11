@@ -8,7 +8,7 @@ const experienceData = [
     role: 'Software Developer',
     timeline: 'Apr 2021 - Present',
     description:
-      'Software Architect and Developer, DevOps Engineer, Mentor, Job Interviewer',
+      'Software Architect and Developer, DevOps Engineer, Developer Mentor, Job Interviewer',
   },
   {
     type: 'work',
