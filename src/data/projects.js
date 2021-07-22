@@ -1,10 +1,10 @@
 const projectsData = [
   {
-    title: 'LivePlanBe+',
-    date: 'Mar 2021',
+    title: 'Learn Diabetes',
+    date: 'Jul 2021',
     role: 'App Architect, Full-Stack Developer',
     description:
-      'LivePlanBe+ is a Digital Lab developed application in partnership with Painc BC. The goal is to enhance the well-being of all people living with pain through personalized support, recommendations and learning modules. This project is currently in development and is being built with a variation of the MERN stack, substituting ExpressJS with KoaJS, and GraphQL.',
+      'A Digital Lab developed platform to help pediatric diabetes patients and their families better manage their diabetic journey through education. This is achieved through providing users access to a comprehensive library of resources and learning modules. This project is currently in development and is being built with GraphQL and a variation of the MERN stack, substituting ExpressJS with KoaJS.',
     stack: [
       'mongodb.svg',
       'koa.svg',
@@ -16,11 +16,11 @@ const projectsData = [
     screenshots: ['wip.png'],
   },
   {
-    title: 'Child Development & Rehabilitation (CDR)',
+    title: 'LivePlanBe+',
     date: 'Mar 2021',
     role: 'App Architect, Full-Stack Developer',
     description:
-      "CDR is a Digital Lab redesign and update of a joint project between Sunny Hill Health Centre at BC Children's Hospital and the BC Ministry of Children and Family Development. The objective is to provide a platform for users to search for children, youth, and family health resources that are relevant to them. This project is currently in development and is being built with a variation of the MERN stack, substituting ExpressJS with KoaJS, and GraphQL.",
+      'LivePlanBe+ is a Digital Lab developed application in partnership with Painc BC. The goal is to enhance the well-being of all people living with pain through personalized support, recommendations and learning modules. This project is currently in development and is being built with GraphQL and a variation of the MERN stack, substituting ExpressJS with KoaJS.',
     stack: [
       'mongodb.svg',
       'koa.svg',
@@ -28,10 +28,26 @@ const projectsData = [
       'react.svg',
       'graphql.svg',
       'docker.svg',
-      'algolia.svg',
     ],
     screenshots: ['wip.png'],
   },
+  // {
+  //   title: 'Child Development & Rehabilitation (CDR)',
+  //   date: 'Mar 2021',
+  //   role: 'App Architect, Full-Stack Developer',
+  //   description:
+  //     "CDR is a Digital Lab redesign and update of a joint project between Sunny Hill Health Centre at BC Children's Hospital and the BC Ministry of Children and Family Development. The objective is to provide a platform for users to search for children, youth, and family health resources that are relevant to them. This project is currently in development and is being built with a variation of the MERN stack, substituting ExpressJS with KoaJS, and GraphQL.",
+  //   stack: [
+  //     'mongodb.svg',
+  //     'koa.svg',
+  //     'nodejs.svg',
+  //     'react.svg',
+  //     'graphql.svg',
+  //     'docker.svg',
+  //     'algolia.svg',
+  //   ],
+  //   screenshots: ['wip.png'],
+  // },
   {
     title: 'Early Childhood Outside',
     date: 'Dec 2020',
