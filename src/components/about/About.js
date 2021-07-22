@@ -67,7 +67,17 @@ const About = () => {
             </a>{' '}
             at BC Children&apos;s Hospital based in Vancouver, BC, Canada, where
             we create impactful projects aimed at improving the well-being of
-            others.
+            others. Additionally, I&apos;m a Web Development Mentor at{' '}
+            <a
+              className="about_profile_link"
+              href="https://www.lighthouselabs.ca/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Lighthouse Labs
+            </a>
+            , where we teach and support the next generation of aspiring
+            developers.
           </p>
         </div>
       </div>

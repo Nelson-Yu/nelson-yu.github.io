@@ -1,6 +1,16 @@
 const experienceData = [
   {
     type: 'work',
+    link: 'https://www.lighthouselabs.ca/',
+    logo: 'lhl.svg',
+    company: 'Lighthouse Labs',
+    location: 'Vancouver, BC, Canada',
+    role: 'Web Development Mentor',
+    timeline: 'Jul 2021 - Present',
+    description: 'Mentor to Aspiring Developers',
+  },
+  {
+    type: 'work',
     link: 'https://www.bcchdigital.ca/',
     logo: 'dl.svg',
     company: 'Digital Lab',
